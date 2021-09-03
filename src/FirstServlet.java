@@ -1,3 +1,4 @@
+import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -11,11 +12,15 @@ public class FirstServlet extends javax.servlet.http.HttpServlet {
         String name = request.getParameter("name");
         String surname = request.getParameter("surname");
 
-        PrintWriter pw =response.getWriter();
+        PrintWriter pw = response.getWriter();
         pw.println("<html>");
-        pw.println("<h1> Hello bro " +name + " " +surname+"</h1>");
-        pw.println("<h2> You know  " +nameLocal +" ? </h1>");
-
+        pw.println("<h1> Hello bro " + name + " " + surname + "</h1>");
+        pw.println("<h2> You know  " + nameLocal + " ? </h1>");
         pw.println("</html>");
+
+//        response.sendRedirect("https://github.com/Egor18032019/JavaEEAlishev");
+//        response.sendRedirect("/Forward.jsp");
+        RequestDispatcher dispatcher =request.getRequestDispatcher("/Redirect.jsp");
+        dispatcher.forward(request,response);
     }
 }
