@@ -36,5 +36,12 @@
     <%Test testClass = new Test(); %>
     <%= testClass.getInfo() %>
 </p>
+<p class="lesson6">
+    <%
+        String name = request.getParameter("name");
+        String surname = request.getParameter("surname");
+    %>
+    <%="How are you " + name + " " + surname + " ?"%>
+</p>
 </body>
 </html>
