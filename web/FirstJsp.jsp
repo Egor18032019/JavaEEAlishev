@@ -26,5 +26,15 @@
         out.println("<span>" + "I can wright: " + i + "</span>");
     }%>
 </p>
+<p class="lesson4">
+    <%@ page import="java.util.Date" %>
+    <%= new Date()%>
+</p>
+<p>
+    <%@ page import="logic.Test" %>
+
+    <%Test testClass = new Test(); %>
+    <%= testClass.getInfo() %>
+</p>
 </body>
 </html>
