@@ -1,5 +1,11 @@
+package somePackage;
+
+import java.util.HashMap;
+
 public class Cart {
     private String name;
+    private int quantity;
+    private HashMap<String, Integer> cart;
 
     public void setName(String name) {
         this.name = name;
@@ -9,7 +15,6 @@ public class Cart {
         this.quantity = quantity;
     }
 
-    private int quantity;
 
     public String getName() {
         return name;
