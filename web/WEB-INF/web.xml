@@ -12,6 +12,22 @@
         <url-pattern>/main</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>SecondServlet</servlet-name>
+        <servlet-class>SecondServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SecondServlet</servlet-name>
+        <url-pattern>/redirect</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletForCart</servlet-name>
+        <servlet-class>ServletForCart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletForCart</servlet-name>
+        <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>FirstJsp</servlet-name>
         <jsp-file>/FirstJsp.jsp</jsp-file>
     </servlet>
