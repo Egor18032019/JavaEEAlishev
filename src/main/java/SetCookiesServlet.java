@@ -1,3 +1,4 @@
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -11,12 +12,14 @@ public class SetCookiesServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Cookie cookie1=new Cookie("some_id","123");
-        cookie1.setMaxAge(24*60*60);
-        Cookie cookie2=new Cookie("some_name","Tom");
-        cookie2.setMaxAge(24*60*60);
+        Cookie cookie1 = new Cookie("some_id", "123");
+        cookie1.setMaxAge(24 * 60 * 60);// срок жизни куки
+        Cookie cookie2 = new Cookie("some_name", "Tom");
+        cookie2.setMaxAge(24 * 60 * 60);
 
         response.addCookie(cookie1);
         response.addCookie(cookie2);
+        RequestDispatcher dispatcher =request.getRequestDispatcher("/Redirect.jsp");
+        dispatcher.forward(request,response);
     }
 }

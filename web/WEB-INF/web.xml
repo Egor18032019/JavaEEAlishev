@@ -61,4 +61,13 @@
         <servlet-name>DeleteCookiesServlet</servlet-name>
         <url-pattern>/delete-cookies</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LibralyServelet</servlet-name>
+        <servlet-class>LibralyServelet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LibralyServelet</servlet-name>
+        <url-pattern>/libraly</url-pattern>
+    </servlet-mapping>
 </web-app>

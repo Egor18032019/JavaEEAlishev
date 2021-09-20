@@ -19,7 +19,7 @@ public class GetCookiesServlet extends HttpServlet {
 
         for (Cookie cookie : cookies) {
 
-            pw.println("<h1>" +cookie.getName()+ " : " + cookie.getValue()+ cookie.toString() + "</h1>");
+            pw.println("<h1>" + cookie.getName() + " : " + cookie.getValue() + cookie.toString() + "</h1>");
         }
         pw.println("</html>");
     }

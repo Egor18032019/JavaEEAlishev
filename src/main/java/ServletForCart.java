@@ -17,7 +17,7 @@ public class ServletForCart extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        Cart cart = (Cart) session.getAttribute("cart");
+        Cart cart = (Cart)session.getAttribute("cart");
         String name = request.getParameter("name");
         Integer quantity = Integer.parseInt(request.getParameter("quantity"));
         if (cart == null) {
